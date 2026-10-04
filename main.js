@@ -1,14 +1,7 @@
-/**
- * مقاولات عامة بالرياض
- * كود الجافا سكريبت التفاعلي الرئيسي
- */
+
 
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
-
-  // ==========================================================================
-  // 1. سلايدر الخلفيات المتغيرة في سيكشن الهيرو
-  // ==========================================================================
   const heroSlides = document.querySelectorAll('.hero-slide-bg');
   let currentSlide = 0;
   const slideIntervalTime = 5000;
@@ -24,9 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(nextHeroSlide, slideIntervalTime);
   }
 
-  // ==========================================================================
-  // 2. التحكم في الناف بار العائم عند التمرير
-  // ==========================================================================
   const floatingNavbar = document.querySelector('.navbar-floating');
   window.addEventListener('scroll', function () {
     if (!floatingNavbar) return;
@@ -37,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ==========================================================================
-  // 3. إغلاق القائمة الجانبية تلقائياً عند النقر على أي رابط
-  // ==========================================================================
+
   const offcanvasElement = document.getElementById('offcanvasNav');
   const offcanvasLinks = document.querySelectorAll('.offcanvas-nav-link');
   if (offcanvasElement && typeof bootstrap !== 'undefined') {
@@ -51,9 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ==========================================================================
-  // 4. نموذج حجز المعاينة المرتبط بالواتساب مباشرة
-  // ==========================================================================
+
   const bookingForm = document.getElementById('whatsappBookingForm');
   if (bookingForm) {
     bookingForm.addEventListener('submit', function (e) {
@@ -83,9 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ==========================================================================
-  // 5. فتح الصور في لايت بوكس عند النقر عليها في المعرض
-  // ==========================================================================
+
   const galleryItems = document.querySelectorAll('.gallery-item');
   const lightboxModal = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImage');
@@ -113,9 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ==========================================================================
-  // 6. عدّاد الإحصائيات التفاعلي عند الوصول إلى السيكشن
-  // ==========================================================================
+
   const counterElements = document.querySelectorAll('.stat-number[data-target]');
   let countersTriggered = false;
 
@@ -154,9 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ==========================================================================
-  // 7. تحديث سنة حقوق النشر تلقائياً
-  // ==========================================================================
+
   const currentYearSpan = document.getElementById('currentYear');
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
